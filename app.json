@@ -7,9 +7,9 @@
     "platforms": ["ios", "android", "web"],
     "version": "0.0.4.alpha",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/sand.png",
       "resizeMode": "cover",
       "backgroundColor": "#220930"
     },
@@ -18,13 +18,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier": "ug.somanystories.otyo",
+      "bundleIdentifier": "ug.bitbrothers.com",
       "buildNumber": "0.0.4.alpha",
       "supportsTablet": true
     },
     "android": {
-      "package": "ug.somanystories.otyo",
-      "versionCode": 5,
+      "package": "ug.timothymasiko.com",
+      "versionCode": 0,
       "permissions": []
     }
   }

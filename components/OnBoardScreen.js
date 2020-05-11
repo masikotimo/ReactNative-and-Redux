@@ -13,14 +13,20 @@ import { connect } from "react-redux";
 
 const { width, height } = Dimensions.get("window");
 
-export default class OnBoardScreen extends Component {
+class OnBoardScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.props.setVariable();
   }
   static navigationOptions = {
     headerShown: false,
   };
+  UNSAFE_componentWillMount() {
+    this.props.isInstalled === true
+      ? this.props.navigation.navigate("Login")
+      : null;
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -120,3 +126,21 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+function mapStateToProps(state) {
+  return {
+    isInstalled: state.isInstalled,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setVariable: () =>
+      dispatch({
+        type: "IS_INSTALLED",
+        isInstalled: false,
+      }),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OnBoardScreen);
