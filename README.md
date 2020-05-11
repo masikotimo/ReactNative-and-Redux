@@ -13,7 +13,7 @@ In the project directory, you can run:
 
 ### Clone the repo:
 
-\$ `git clone https://gitlab.com/kanzucode/sooo-many-stories/otyo-mobile-app.git`
+\$ `git clone https://github.com/masikotimo/ReactNative-and-Redux.git`
 
 ### Navigate to the root folder of the repo:
 
