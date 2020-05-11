@@ -1,5 +1,5 @@
 import React from "react";
-// import ScreenContainer from "./screens/screen";
+import ScreenContainer from "./screens/screen";
 import { Provider } from "react-redux";
 import { store, persistor } from "./redux/index";
 import { PersistGate } from "redux-persist/lib/integration/react";
@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <OnBoardScreen />
+          <ScreenContainer />
         </PersistGate>
       </Provider>
     );
